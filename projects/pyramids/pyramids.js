@@ -40,7 +40,7 @@ function drawPyramids(width, height, canvas) {
         }
       }
       context.restore();
-      if (elapsed > 2500) { bouncing = false; timer.stop(); } else { bouncing = true; }
+      if (elapsed > 7500) { bouncing = false; timer.stop(); } else { bouncing = true; }
     }, 0);
     return true;
   }
