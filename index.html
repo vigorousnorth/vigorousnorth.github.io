@@ -9,16 +9,24 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet"> 
-   
+    <link href="https://fonts.googleapis.com/css?family=Bitter|Source+Sans+Pro" rel="stylesheet"> 
+   	
+   	<script src="https://use.fontawesome.com/ca65e0c631.js"></script>
+
     <style type="text/css">
 
-    body {font-family: 'Bitter', serif;}
+    h1, h2, h3, h4, h5 {font-family: 'Bitter', serif;}
+    p, ul {font-family: 'Source Sans Pro', sans-serif;}
+
+    ul.contact {list-style-type: none; padding: 1em 0em; margin: 0.5em 0em; border-bottom: 1px dotted; border-top: 1px dotted;}
+    ul.contact li { width: 49%; display: inline-block; margin: 0.25em 0; font-size: 0.8em;}
+    ul.contact i {font-size: 1.5em; margin-right: 0.25em; color: #000;}
+
     div.panel-body img {float: left; width: 50%; margin-left: 0.8em; margin-right: 0.8em; max-width: 200px;}
     div.clear {clear: both;}
 
     div.sidebar {position: relative; width: 40%; left: 55%;}
-
+    .intro p {margin: 1.5em 0; font-size: 1.2em;}
 
     @media screen and (max-width: 480px) {
     	div.sidebar {position: relative; width: 100%; left: 0px;}
@@ -39,7 +47,25 @@
   <div class="sidebar">
     <h1>Christian MilNeil</h1>
     <h5>Amalgamated Industries of the Liberal Arts</h5>
-    <p>Christian MilNeil is a journalist, statistician, programmer and freelance cartographer. These are some of the things I've made:</p>
+    <ul class="contact">
+    	<li><a href="http://twitter.com/vigorousnorth"><i class="fa fa-twitter-square" aria-hidden="true"></i>
+@vigorousnorth</a></li>
+    	<li><a href="http://facebook.com/christianmilneil"><i class="fa fa-facebook-square" aria-hidden="true"></i>
+facebook.com/christianmilneil</a></li>
+    	<li><a href="http://github.com/vigorousnorth"><i class="fa fa-github-square" aria-hidden="true"></i>
+github.com/vigorousnorth</a></li>
+    	<li><i class="fa fa-envelope" aria-hidden="true"></i>
+cmilneil at pressherald.com</li>
+		<li><a href="bl.ocks.org/vigorousnorth" target="_blank"><i class="fa fa-pie-chart" aria-hidden="true"></i>bl.ocks.org/vigorousnorth</a></li>
+    </ul>
+
+
+    <div class="intro">
+    	<p>Hello. I'm a journalist, statistician, programmer and freelance cartographer. I'm particularly interested in history, geography, literature,
+    		climate advocacy, and egalitarian urban design (especially affordable housing).</p>
+    	<p>I'm currently available on a very limited basis for freelance commissions – especially if you've got a fun and interesting project.</p>
+    	<p>These are some of the things I've made in the past:</p>
+    </div>
 
 	<div class="panel-group">
 	  <div class="panel panel-default">
