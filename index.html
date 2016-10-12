@@ -25,13 +25,17 @@
     div.panel-body img {float: left; width: 50%; margin-left: 0.8em; margin-right: 0.8em; max-width: 200px;}
     div.clear {clear: both;}
 
-    div.sidebar {position: relative; width: 40%; left: 55%;}
+    div.sidebar {position: relative; width: 40%; left: 58%; padding: 2em 1em; background-color: rgba(255,255,255,0.9);}
     .intro p {margin: 1.5em 0; font-size: 1.2em;}
 
     @media screen and (max-width: 480px) {
-    	div.sidebar {position: relative; width: 100%; left: 0px;}
+    	div.sidebar {position: relative; width: 90%; left: 5%;}
     	div.panel-body img {width: 100%; margin-bottom: 0.8em; float: none;}
     }
+
+    .showcase {width: 100%; height: 100%; position: fixed; top: 0px; left: 0px;}
+
+    .showcase canvas {width: 100%; height: 800px; position: absolute; top: 0px; left: 0px;}
 
     </style>
 
@@ -41,8 +45,13 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
   </head>
   <body>
+
+  	<div class="showcase">
+		<canvas id="pyramids"></canvas>
+	</div>
 
   <div class="sidebar">
     <h1>Christian MilNeil</h1>
@@ -158,5 +167,25 @@ cmilneil at pressherald.com</li>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+	
+	<script src="https://d3js.org/d3-timer.v1.js"></script>
+	<script src="http://d3js.org/d3-ease.v0.7.min.js"></script>
+	
+	<script src="projects/pyramids/isometric.js"></script>
+	<script src="projects/pyramids/pyramids.js"></script>
+
+	<script type="text/javascript">
+		jQuery(function() {
+			var w = jQuery("canvas#pyramids").width();
+			var h = jQuery("canvas#pyramids").height();
+			jQuery("canvas#pyramids").attr("width", w);
+
+			jQuery("canvas#pyramids").attr("height", h);
+			var c = document.querySelector("canvas#pyramids");
+      		
+			console.log(w);
+			drawPyramids(w,h,c);
+		});
+ 	</script> 
   </body>
 </html>
